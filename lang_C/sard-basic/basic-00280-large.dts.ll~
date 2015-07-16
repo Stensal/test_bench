@@ -1,0 +1,239 @@
+target datalayout = "e-m:e-p:32:32-f64:32:64-f80:32-n8:16:32-S128"
+target triple = "i386-pc-linux-gnu"
+@__dts_wp_todo__struct.__dts_rt__call_meta_type__ = external externally_initialized global %struct.__dts_rt__int_base_type_
+@__dts_rt__int_base_ = external externally_initialized global %struct.__dts_rt__int_base_type_
+@__dts_rt__return_meta_ptr_ = external thread_local global %struct.__dts_rt__call_meta_type_*
+@__dts_rt__actual_parameter_meta_ptr_ = external thread_local global %struct.__dts_rt__call_meta_type_*
+%struct.__dts_rt__call_meta_type_ = type <{i32, i8}>
+%struct.__dts_rt__int_base_type_ = type {i32, i32}
+declare external void @__dts_rt__memmove_ (i32* ; implicit param
+, i32* ; implicit param
+, i32 ; implicit param
+)
+declare external void @__dts_rt__memcpy_ (i32* ; implicit param
+, i32* ; implicit param
+, i32 ; implicit param
+)
+declare external i32* @__dts_rt__add_ptr_ptr_ (i32* ; implicit param
+, i32* ; implicit param
+)
+declare external i32 @__dts_rt__add_ptrint_ptrint_ (i32 ; implicit param
+, i32 ; implicit param
+)
+declare external i32 @__dts_rt__add_size_size_ (i32 ; implicit param
+, i32 ; implicit param
+)
+declare external i32 @__dts_rt__add_base_base_ (i32 ; implicit param
+, i32 ; implicit param
+)
+declare external void @__dts_rt__chk_wt_ (i32 ; implicit param
+, i32 ; implicit param
+, i32 ; implicit param
+, i32 ; implicit param
+)
+declare external void @__dts_rt__chk_rd_ (i32 ; implicit param
+, i32 ; implicit param
+, i32 ; implicit param
+, i32 ; implicit param
+)
+declare void @llvm.memcpy.p0i8.p0i8.i32 (i8* ; implicit param
+, i8* ; implicit param
+, i32 ; implicit param
+, i32 ; implicit param
+, i1 ; implicit param
+)
+@".str_block" = private unnamed_addr constant <{i32, [19 x i8], [19 x i8]}> <{i32 19, [19 x i8] c"loop_counter = %d\0A\00", [19 x i8] zeroinitializer}>, align 1
+@__dts_wp_todo__.str_ = unnamed_addr alias private getelementptr inbounds (<{i32, [19 x i8], [19 x i8]}>* @".str_block", i32 0, i32 1)
+@".str1_block" = private unnamed_addr constant <{i32, [17 x i8], [17 x i8]}> <{i32 17, [17 x i8] c"test_value = %d\0A\00", [17 x i8] zeroinitializer}>, align 1
+@__dts_wp_todo__.str1_ = unnamed_addr alias private getelementptr inbounds (<{i32, [17 x i8], [17 x i8]}>* @".str1_block", i32 0, i32 1)
+@".str2_block" = private unnamed_addr constant <{i32, [16 x i8], [16 x i8]}> <{i32 16, [16 x i8] c"inc_value = %d\0A\00", [16 x i8] zeroinitializer}>, align 1
+@__dts_wp_todo__.str2_ = unnamed_addr alias private getelementptr inbounds (<{i32, [16 x i8], [16 x i8]}>* @".str2_block", i32 0, i32 1)
+define i32 @__dts_wp__main_ (i32 %argc, i8** %argv) #0 {
+"_hoopl_label_L1":
+  %"C_globalAddr (GlobalIdAlphaNum _.str_)#size" = load i32* inttoptr (i32 add nsw (i32 ptrtoint ([19 x i8]* @__dts_wp_todo__.str_ to i32), i32 -4) to i32*)
+  %"C_globalAddr (GlobalIdAlphaNum _.str_)#msect1_addr" = add nsw i32 ptrtoint ([19 x i8]* @__dts_wp_todo__.str_ to i32), %"C_globalAddr (GlobalIdAlphaNum _.str_)#size"
+  %"C_globalAddr (GlobalIdAlphaNum _.str_)#msect1_ptr" = inttoptr i32 %"C_globalAddr (GlobalIdAlphaNum _.str_)#msect1_addr" to i32*
+  %"C_globalAddr (GlobalIdAlphaNum _.str1_)#size" = load i32* inttoptr (i32 add nsw (i32 ptrtoint ([17 x i8]* @__dts_wp_todo__.str1_ to i32), i32 -4) to i32*)
+  %"C_globalAddr (GlobalIdAlphaNum _.str1_)#msect1_addr" = add nsw i32 ptrtoint ([17 x i8]* @__dts_wp_todo__.str1_ to i32), %"C_globalAddr (GlobalIdAlphaNum _.str1_)#size"
+  %"C_globalAddr (GlobalIdAlphaNum _.str1_)#msect1_ptr" = inttoptr i32 %"C_globalAddr (GlobalIdAlphaNum _.str1_)#msect1_addr" to i32*
+  %"C_globalAddr (GlobalIdAlphaNum _.str2_)#size" = load i32* inttoptr (i32 add nsw (i32 ptrtoint ([16 x i8]* @__dts_wp_todo__.str2_ to i32), i32 -4) to i32*)
+  %"C_globalAddr (GlobalIdAlphaNum _.str2_)#msect1_addr" = add nsw i32 ptrtoint ([16 x i8]* @__dts_wp_todo__.str2_ to i32), %"C_globalAddr (GlobalIdAlphaNum _.str2_)#size"
+  %"C_globalAddr (GlobalIdAlphaNum _.str2_)#msect1_ptr" = inttoptr i32 %"C_globalAddr (GlobalIdAlphaNum _.str2_)#msect1_addr" to i32*
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 16 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str2_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" = add nsw i32 ptrtoint (i8* getelementptr inbounds ([16 x i8]* @__dts_wp_todo__.str2_, i32 0, i32 0) to i32), %"C_globalAddr (GlobalIdAlphaNum _.str2_)#size"
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 16 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str2_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_ptr" = inttoptr i32 %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 16 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str2_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" to i32*
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 17 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str1_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" = add nsw i32 ptrtoint (i8* getelementptr inbounds ([17 x i8]* @__dts_wp_todo__.str1_, i32 0, i32 0) to i32), %"C_globalAddr (GlobalIdAlphaNum _.str1_)#size"
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 17 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str1_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_ptr" = inttoptr i32 %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 17 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str1_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" to i32*
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 19 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" = add nsw i32 ptrtoint (i8* getelementptr inbounds ([19 x i8]* @__dts_wp_todo__.str_, i32 0, i32 0) to i32), %"C_globalAddr (GlobalIdAlphaNum _.str_)#size"
+  %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 19 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_ptr" = inttoptr i32 %"C_getelementptr (Is InBounds) (T Tpointer EtypeRecordD Tarray 19 DtypeScalarI TpI 8 0 (C_globalAddr (GlobalIdAlphaNum _.str_))) [T TpI 32 (C_int _0_),T TpI 32 (C_int _0_)]#msect1_addr" to i32*
+  %"@main#fp#metaBlock" = load %struct.__dts_rt__call_meta_type_** @__dts_rt__actual_parameter_meta_ptr_
+  %"@main#fp#msectSizeStore" = getelementptr inbounds %struct.__dts_rt__call_meta_type_* %"@main#fp#metaBlock", i32 0, i32 0
+  %"@main#fp#msectSize" = load i32* %"@main#fp#msectSizeStore"
+  %"@main#fp#metaBase" = getelementptr inbounds %struct.__dts_rt__call_meta_type_* %"@main#fp#metaBlock", i32 0, i32 1
+  %"@main{0}#dsectBaseStoreAddr.I8" = getelementptr inbounds i8* %"@main#fp#metaBase", i32 0
+  %"@main{0}#dsectBaseStoreAddr" = bitcast i8* %"@main{0}#dsectBaseStoreAddr.I8" to i32*
+  %"@main{0}#dsectBase" = load i32* %"@main{0}#dsectBaseStoreAddr"
+  %"@main{0}#size_addr" = add nsw i32 %"@main{0}#dsectBase", -4
+  %"@main{0}#size_ptr" = inttoptr i32 %"@main{0}#size_addr" to i32*
+  %"@main{0}#size" = load i32* %"@main{0}#size_ptr"
+  %"@main{0}#asInt" = bitcast i32 %argc to i32
+  %"@main{0}#msect1_addr" = add nsw i32 %"@main{0}#asInt", %"@main{0}#size"
+  %"@main{0}#msect1_ptr" = inttoptr i32 %"@main{0}#msect1_addr" to i32*
+  %"@main{1}#dsectBaseStoreAddr.I8" = getelementptr inbounds i8* %"@main#fp#metaBase", i32 4
+  %"@main{1}#dsectBaseStoreAddr" = bitcast i8* %"@main{1}#dsectBaseStoreAddr.I8" to i32*
+  %"@main{1}#dsectBase" = load i32* %"@main{1}#dsectBaseStoreAddr"
+  %"@main{1}#size_addr" = add nsw i32 %"@main{1}#dsectBase", -4
+  %"@main{1}#size_ptr" = inttoptr i32 %"@main{1}#size_addr" to i32*
+  %"@main{1}#size" = load i32* %"@main{1}#size_ptr"
+  %"@main{1}#asInt" = ptrtoint i8** %argv to i32
+  %"@main{1}#msect1_addr" = add nsw i32 %"@main{1}#asInt", %"@main{1}#size"
+  %"@main{1}#msect1_ptr" = inttoptr i32 %"@main{1}#msect1_addr" to i32*
+  %retval = alloca i32, align 4
+  %argc.addr = alloca i32, align 4
+  ; rewriting.. %argv.addr = alloca i8 0 * 0 * , align 4
+  %argv.addr = alloca i8**, align 4
+  %"argv.addr#asInt" = alloca i32, align 4
+  %"argv.addr#dbase" = alloca i32, align 4
+  %"argv.addr#dsize" = alloca i32, align 4
+  ; I_fact (Fact_GfatLvalueInst (LocalIdAlphaNum "argv.addr") (GfatLvalue {gflv_lvalue_for_asInt = LocalIdDqString "argv.addr#asInt", gflv_lvalue_for_dsectBase = LocalIdDqString "argv.addr#dbase", gflv_lvalue_for_dsectSize = LocalIdDqString "argv.addr#dsize"}))
+  %init_value = alloca i32, align 4
+  %test_value = alloca i32, align 4
+  %inc_value = alloca i32, align 4
+  %loop_counter = alloca i32, align 4
+  ; rewriting.. %buf = alloca [10 x i8] , align 1
+  %"buf#block_addr" = alloca <{i32, [10 x i8], [10 x i8]}>, align 1
+  %buf = getelementptr inbounds <{i32, [10 x i8], [10 x i8]}>* %"buf#block_addr", i32 0, i32 1
+  %"buf#dsectBase" = ptrtoint [10 x i8]* %buf to i32
+  %"buf#size_addr" = add nsw i32 %"buf#dsectBase", -4
+  %"buf#size_ptr" = inttoptr i32 %"buf#size_addr" to i32*
+  store i32 10, i32* %"buf#size_ptr"
+  %"buf#msect1_addr" = add nsw i32 %"buf#dsectBase", 10
+  %"buf#msect1_ptr" = inttoptr i32 %"buf#msect1_addr" to i32*
+  ; I_fact (Fact_SfatRvalueInst (Val_ssa (LocalIdAlphaNum "buf")) (SfatRvalue {sfrv_rvalueAsInt = Val_ssa (LocalIdDqString "buf#dsectBase"), sfrv_dsectBase = Val_ssa (LocalIdDqString "buf#dsectBase"), sfrv_dsectSize = Val_const (C_u32 10), sfrv_mrvalue = Val_ssa (LocalIdDqString "buf#msect1_ptr")}))
+  ; rewriting.. store i32 0, i32 0 * %retval
+  ; store to non pointer
+  store i32 0, i32* %retval
+  ; rewriting.. store i32 %argc, i32 0 * %argc.addr , align 4
+  ; unhandled case Just (SfatRvalue {sfrv_rvalueAsInt = Val_ssa (LocalIdDqString "@main{0}#asInt"), sfrv_dsectBase = Val_ssa (LocalIdDqString "@main{0}#dsectBase"), sfrv_dsectSize = Val_ssa (LocalIdDqString "@main{0}#size"), sfrv_mrvalue = Val_ssa (LocalIdDqString "@main{0}#msect1_ptr")}), Val_ssa (LocalIdAlphaNum "argc.addr")
+  store i32 %argc, i32* %argc.addr, align 4
+  call void @llvm.dbg.declare (metadata !{i32* %argc.addr}, metadata !15), !dbg !16
+  ; rewriting.. store i8 0 * 0 * %argv, i8 0 * 0 * 0 * %argv.addr , align 4
+  store i32 %"@main{1}#asInt", i32* %"argv.addr#asInt", align 4
+  store i32 %"@main{1}#dsectBase", i32* %"argv.addr#dbase", align 4
+  store i32 %"@main{1}#size", i32* %"argv.addr#dsize", align 4
+  store i8** %argv, i8*** %argv.addr, align 4
+  call void @llvm.dbg.declare (metadata !{i8*** %argv.addr}, metadata !17), !dbg !18
+  call void @llvm.dbg.declare (metadata !{i32* %init_value}, metadata !19), !dbg !20
+  call void @llvm.dbg.declare (metadata !{i32* %test_value}, metadata !21), !dbg !22
+  call void @llvm.dbg.declare (metadata !{i32* %inc_value}, metadata !23), !dbg !24
+  call void @llvm.dbg.declare (metadata !{i32* %loop_counter}, metadata !25), !dbg !26
+  call void @llvm.dbg.declare (metadata !{[10 x i8]* %buf}, metadata !27), !dbg !31
+  call void @llvm.dbg.declare (metadata !{<{i32, [10 x i8], [10 x i8]}>* %"buf#block_addr"}, metadata !27), !dbg !31
+  ; rewriting.. store i32 0, i32 0 * %init_value , align 4, !dbg !32
+  ; store to non pointer
+  store i32 0, i32* %init_value, align 4, !dbg !32
+  ; rewriting.. store i32 4105, i32 0 * %test_value , align 4, !dbg !33
+  ; store to non pointer
+  store i32 4105, i32* %test_value, align 4, !dbg !33
+  ; rewriting.. store i32 1, i32 0 * %inc_value , align 4, !dbg !34
+  ; store to non pointer
+  store i32 1, i32* %inc_value, align 4, !dbg !34
+  %_impl_ID0 = load i32* %init_value, align 4, !dbg !35
+  ; rewriting.. store i32 %_impl_ID0, i32 0 * %loop_counter , align 4, !dbg !35
+  ; store to non pointer
+  store i32 %_impl_ID0, i32* %loop_counter, align 4, !dbg !35
+  br label %"_hoopl_label_L2", !dbg !35
+"_hoopl_label_L4":
+  ret i32 0, !dbg !47
+"_hoopl_label_L3":
+  %_impl_ID3 = load i32* %loop_counter, align 4, !dbg !39
+  %call = call i32 (i8*, ...)* @printf (i8* getelementptr inbounds ([19 x i8]* @__dts_wp_todo__.str_, i32 0, i32 0), i32 %_impl_ID3), !dbg !39
+  %_impl_ID4 = load i32* %test_value, align 4, !dbg !41
+  %call1 = call i32 (i8*, ...)* @printf (i8* getelementptr inbounds ([17 x i8]* @__dts_wp_todo__.str1_, i32 0, i32 0), i32 %_impl_ID4), !dbg !41
+  %_impl_ID5 = load i32* %loop_counter, align 4, !dbg !42
+  ; rewriting.. %arrayidx = getelementptr inbounds ([10 x i8] 0 * %buf, i32 0, i32 %_impl_ID5), !dbg !42
+  %arrayidx = getelementptr inbounds [10 x i8]* %buf, i32 0, i32 %_impl_ID5, !dbg !42
+  %"arrayidx#asInt" = ptrtoint i8* %arrayidx to i32
+  %"arrayidx#msect1_addr" = add nsw i32 %"arrayidx#asInt", 10
+  %"arrayidx#msect1_ptr" = inttoptr i32 %"arrayidx#msect1_addr" to i32*
+  ; I_fact (Fact_SfatRvalueInst (Val_ssa (LocalIdAlphaNum "arrayidx")) (SfatRvalue {sfrv_rvalueAsInt = Val_ssa (LocalIdDqString "arrayidx#asInt"), sfrv_dsectBase = Val_ssa (LocalIdDqString "buf#dsectBase"), sfrv_dsectSize = Val_const (C_u32 10), sfrv_mrvalue = Val_ssa (LocalIdDqString "arrayidx#msect1_ptr")}))
+  ; rewriting.. store i8 65, i8 0 * %arrayidx , align 1, !dbg !42
+  ; store intBase  to SfatRvalue {sfrv_rvalueAsInt = Val_ssa (LocalIdDqString "arrayidx#asInt"), sfrv_dsectBase = Val_ssa (LocalIdDqString "buf#dsectBase"), sfrv_dsectSize = Val_const (C_u32 10), sfrv_mrvalue = Val_ssa (LocalIdDqString "arrayidx#msect1_ptr")}
+  call void @__dts_rt__chk_wt_ (i32 %"buf#dsectBase", i32 10, i32 %"arrayidx#asInt", i32 1)
+  store i32 ptrtoint (i32* getelementptr inbounds (%struct.__dts_rt__int_base_type_* @__dts_rt__int_base_, i32 0, i32 1) to i32), i32* %"arrayidx#msect1_ptr", align 1
+  store i8 65, i8* %arrayidx, align 1, !dbg !42
+  %_impl_ID6 = load i32* %inc_value, align 4, !dbg !43
+  %_impl_ID7 = load i32* %loop_counter, align 4, !dbg !43
+  %add = add nsw i32 %_impl_ID7, %_impl_ID6, !dbg !43
+  ; rewriting.. store i32 %add, i32 0 * %loop_counter , align 4, !dbg !43
+  ; store to non pointer
+  store i32 %add, i32* %loop_counter, align 4, !dbg !43
+  %_impl_ID8 = load i32* %loop_counter, align 4, !dbg !44
+  %call2 = call i32 (i8*, ...)* @printf (i8* getelementptr inbounds ([19 x i8]* @__dts_wp_todo__.str_, i32 0, i32 0), i32 %_impl_ID8), !dbg !44
+  %_impl_ID9 = load i32* %inc_value, align 4, !dbg !45
+  %call3 = call i32 (i8*, ...)* @printf (i8* getelementptr inbounds ([16 x i8]* @__dts_wp_todo__.str2_, i32 0, i32 0), i32 %_impl_ID9), !dbg !45
+  br label %"_hoopl_label_L2", !dbg !46
+"_hoopl_label_L2":
+  %_impl_ID1 = load i32* %loop_counter, align 4, !dbg !37
+  %_impl_ID2 = load i32* %test_value, align 4, !dbg !37
+  %cmp = icmp sle i32 %_impl_ID1, %_impl_ID2, !dbg !37
+  br i1 %cmp, label %"_hoopl_label_L3", label %"_hoopl_label_L4", !dbg !37
+}
+declare void @llvm.dbg.declare (metadata ; implicit param
+, metadata ; implicit param
+) #1
+declare i32 @printf (i8* ; implicit param
+, ...) #2
+attributes #0 = {nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false"}
+attributes #1 = {nounwind readnone}
+attributes #2 = {"less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false"}
+!llvm.dbg.cu = !{!0}
+!llvm.module.flags = !{!12, !13}
+!llvm.ident = !{!14}
+!0 = metadata !{i32 786449, metadata !1, i32 12, metadata !"clang version 3.5.0 (tags/RELEASE_350/final)", i1 false, metadata !"", i32 0, metadata !2, metadata !2, metadata !3, metadata !2, metadata !2, metadata !"", i32 1}
+!1 = metadata !{metadata !"basic-00280-large.c", metadata !"/mnt/hgfs/sf_vm_share/SandboxCodes/sard"}
+!2 = metadata !{}
+!3 = metadata !{metadata !4}
+!4 = metadata !{i32 786478, metadata !1, metadata !5, metadata !"main", metadata !"main", metadata !"", i32 50, metadata !6, i1 false, i1 true, i32 0, i32 0, null, i32 256, i1 false, i32 (i32, i8**)* @__dts_wp__main_, null, null, metadata !2, i32 51}
+!5 = metadata !{i32 786473, metadata !1}
+!6 = metadata !{i32 786453, i32 0, null, metadata !"", i32 0, i64 0, i64 0, i64 0, i32 0, null, metadata !7, i32 0, null, null, null}
+!7 = metadata !{metadata !8, metadata !8, metadata !9}
+!8 = metadata !{i32 786468, null, null, metadata !"int", i32 0, i64 32, i64 32, i64 0, i32 0, i32 5}
+!9 = metadata !{i32 786447, null, null, metadata !"", i32 0, i64 32, i64 32, i64 0, i32 0, metadata !10}
+!10 = metadata !{i32 786447, null, null, metadata !"", i32 0, i64 32, i64 32, i64 0, i32 0, metadata !11}
+!11 = metadata !{i32 786468, null, null, metadata !"char", i32 0, i64 8, i64 8, i64 0, i32 0, i32 6}
+!12 = metadata !{i32 2, metadata !"Dwarf Version", i32 4}
+!13 = metadata !{i32 2, metadata !"Debug Info Version", i32 1}
+!14 = metadata !{metadata !"clang version 3.5.0 (tags/RELEASE_350/final)"}
+!15 = metadata !{i32 786689, metadata !4, metadata !"argc", metadata !5, i32 16777266, metadata !8, i32 0, i32 0}
+!16 = metadata !{i32 50, i32 14, metadata !4, null}
+!17 = metadata !{i32 786689, metadata !4, metadata !"argv", metadata !5, i32 33554482, metadata !9, i32 0, i32 0}
+!18 = metadata !{i32 50, i32 26, metadata !4, null}
+!19 = metadata !{i32 786688, metadata !4, metadata !"init_value", metadata !5, i32 52, metadata !8, i32 0, i32 0}
+!20 = metadata !{i32 52, i32 7, metadata !4, null}
+!21 = metadata !{i32 786688, metadata !4, metadata !"test_value", metadata !5, i32 53, metadata !8, i32 0, i32 0}
+!22 = metadata !{i32 53, i32 7, metadata !4, null}
+!23 = metadata !{i32 786688, metadata !4, metadata !"inc_value", metadata !5, i32 54, metadata !8, i32 0, i32 0}
+!24 = metadata !{i32 54, i32 7, metadata !4, null}
+!25 = metadata !{i32 786688, metadata !4, metadata !"loop_counter", metadata !5, i32 55, metadata !8, i32 0, i32 0}
+!26 = metadata !{i32 55, i32 7, metadata !4, null}
+!27 = metadata !{i32 786688, metadata !4, metadata !"buf", metadata !5, i32 56, metadata !28, i32 0, i32 0}
+!28 = metadata !{i32 786433, null, null, metadata !"", i32 0, i64 80, i64 8, i32 0, i32 0, metadata !11, metadata !29, i32 0, null, null, null}
+!29 = metadata !{metadata !30}
+!30 = metadata !{i32 786465, i64 0, i64 10}
+!31 = metadata !{i32 56, i32 8, metadata !4, null}
+!32 = metadata !{i32 58, i32 3, metadata !4, null}
+!33 = metadata !{i32 59, i32 3, metadata !4, null}
+!34 = metadata !{i32 60, i32 3, metadata !4, null}
+!35 = metadata !{i32 62, i32 7, metadata !36, null}
+!36 = metadata !{i32 786443, metadata !1, metadata !4, i32 62, i32 3, i32 0, i32 0}
+!37 = metadata !{i32 62, i32 7, metadata !38, null}
+!38 = metadata !{i32 786443, metadata !1, metadata !36, i32 62, i32 7, i32 1, i32 2}
+!39 = metadata !{i32 65, i32 5, metadata !40, null}
+!40 = metadata !{i32 786443, metadata !1, metadata !36, i32 63, i32 3, i32 0, i32 1}
+!41 = metadata !{i32 66, i32 5, metadata !40, null}
+!42 = metadata !{i32 67, i32 5, metadata !40, null}
+!43 = metadata !{i32 68, i32 5, metadata !40, null}
+!44 = metadata !{i32 69, i32 5, metadata !40, null}
+!45 = metadata !{i32 70, i32 5, metadata !40, null}
+!46 = metadata !{i32 71, i32 3, metadata !40, null}
+!47 = metadata !{i32 74, i32 3, metadata !4, null}

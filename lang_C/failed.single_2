@@ -1,0 +1,55 @@
+compilation failure: ../y/950221-1.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/fehler064.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/fehler064.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/980619-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
+execution failure: ../y/980619-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/tcctest_file.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/tcctest_file.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/const2.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/fehler153.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/fehler153.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/cp_error081.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/cp_error081.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/fehler151.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/fehler151.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/wprintf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/wprintf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/cp_error075.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/fehler125.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/fehler125.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/nans.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/nans.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/doublewide.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/doublewide.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/fewparams.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/fewparams.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/string-opt-5.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/string-opt-5.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/comp-goto-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/comp-goto-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/builtin_nan.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/builtin_nan.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/stdarg-3.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/stdarg-3.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
+execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/20030331-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
+execution failure: ../y/shiftamount.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/shiftamount.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/cp_error078.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/cp_error078.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/20010114-2.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
+execution failure: ../y/20010114-2.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/fehler095.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/fehler095.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/fehler152.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/fehler152.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/conv.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/conv.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
+execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
+execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/scanf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
+compilation failure: ../y/scanf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: ../y/fehler126.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh

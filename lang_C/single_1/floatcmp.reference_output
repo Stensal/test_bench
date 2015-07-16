@@ -1,0 +1,150 @@
+3.000000 < 3.000000 = false
+3.000000 <= 3.000000 = true
+3.000000 == 3.000000 = true
+3.000000 >= 3.000000 = true
+3.000000 > 3.000000 = false
+3.000000 != 3.000000 = false
+3.000000 < 4.000000 = true
+3.000000 <= 4.000000 = true
+3.000000 == 4.000000 = false
+3.000000 >= 4.000000 = false
+3.000000 > 4.000000 = false
+3.000000 != 4.000000 = true
+3.000000 < nan = false
+3.000000 <= nan = false
+3.000000 == nan = false
+3.000000 >= nan = false
+3.000000 > nan = false
+3.000000 != nan = true
+nan != nan = true
+isgreater(3.000000, 4.000000) = false
+isgreaterequal(3.000000, 4.000000) = false
+isless(3.000000, 4.000000) = true
+islessequal(3.000000, 4.000000) = true
+islessgreater(3.000000, 4.000000) = true
+isunordered(3.000000, 4.000000) = false
+isgreater(3.000000, nan) = false
+isgreaterequal(3.000000, nan) = false
+isless(3.000000, nan) = false
+islessequal(3.000000, nan) = false
+islessgreater(3.000000, nan) = false
+isunordered(3.000000, nan) = true
+islessgreater(3.000000, 4.000000) = true
+islessgreater(nan, nan) = false
+!isgreater(3.000000, nan) = true
+!isgreaterequal(3.000000, nan) = true
+!isless(3.000000, nan) = true
+!islessequal(3.000000, nan) = true
+!islessgreater(3.000000, nan) = true
+!isunordered(3.000000, nan) = false
+test_t_float_l 0
+test_t_float_le 1
+test_t_float_eq 1
+test_t_float_ge 1
+test_t_float_g 0
+test_t_float_lg 0
+test_t_float_l 1
+test_t_float_le 1
+test_t_float_eq 0
+test_t_float_ge 0
+test_t_float_g 0
+test_t_float_lg 1
+test_t_float_l 0
+test_t_float_le 0
+test_t_float_eq 0
+test_t_float_ge 0
+test_t_float_g 0
+test_t_float_lg 1
+test_t_float_isgreater 0
+test_t_float_isgreaterequal 0
+test_t_float_isless 1
+test_t_float_islessequal 1
+test_t_float_islessgreater 1
+test_t_float_isunordered 0
+test_t_float_isgreater 0
+test_t_float_isgreaterequal 1
+test_t_float_isless 0
+test_t_float_islessequal 1
+test_t_float_islessgreater 0
+test_t_float_isunordered 0
+test_t_float_isgreater 0
+test_t_float_isgreaterequal 0
+test_t_float_isless 0
+test_t_float_islessequal 0
+test_t_float_islessgreater 0
+test_t_float_isunordered 1
+test_f_float_l 1
+test_f_float_le 0
+test_f_float_eq 0
+test_f_float_ge 0
+test_f_float_g 1
+test_f_float_lg 1
+test_f_float_l 0
+test_f_float_le 0
+test_f_float_eq 1
+test_f_float_ge 1
+test_f_float_g 1
+test_f_float_lg 0
+test_f_float_l 1
+test_f_float_le 1
+test_f_float_eq 1
+test_f_float_ge 1
+test_f_float_g 1
+test_f_float_lg 0
+test_f_float_isgreater 1
+test_f_float_isgreaterequal 1
+test_f_float_isless 0
+test_f_float_islessequal 0
+test_f_float_islessgreater 0
+test_f_float_isunordered 1
+test_f_float_isgreater 1
+test_f_float_isgreaterequal 0
+test_f_float_isless 1
+test_f_float_islessequal 0
+test_f_float_islessgreater 1
+test_f_float_isunordered 1
+test_f_float_isgreater 1
+test_f_float_isgreaterequal 1
+test_f_float_isless 1
+test_f_float_islessequal 1
+test_f_float_islessgreater 1
+test_f_float_isunordered 0
+3.000000 < 3.000000 = false
+3.000000 <= 3.000000 = true
+3.000000 == 3.000000 = true
+3.000000 >= 3.000000 = true
+3.000000 > 3.000000 = false
+3.000000 != 3.000000 = false
+3.000000 < 4.000000 = true
+3.000000 <= 4.000000 = true
+3.000000 == 4.000000 = false
+3.000000 >= 4.000000 = false
+3.000000 > 4.000000 = false
+3.000000 != 4.000000 = true
+3.000000 < nan = false
+3.000000 <= nan = false
+3.000000 == nan = false
+3.000000 >= nan = false
+3.000000 > nan = false
+3.000000 != nan = true
+nan != nan = true
+isgreater(3.000000, 4.000000) = false
+isgreaterequal(3.000000, 4.000000) = false
+isless(3.000000, 4.000000) = true
+islessequal(3.000000, 4.000000) = true
+islessgreater(3.000000, 4.000000) = true
+isunordered(3.000000, 4.000000) = false
+isgreater(3.000000, nan) = false
+isgreaterequal(3.000000, nan) = false
+isless(3.000000, nan) = false
+islessequal(3.000000, nan) = false
+islessgreater(3.000000, nan) = false
+isunordered(3.000000, nan) = true
+islessgreater(3.000000, 4.000000) = true
+islessgreater(nan, nan) = false
+!isgreater(3.000000, nan) = true
+!isgreaterequal(3.000000, nan) = true
+!isless(3.000000, nan) = true
+!islessequal(3.000000, nan) = true
+!islessgreater(3.000000, nan) = true
+!isunordered(3.000000, nan) = false

@@ -1,0 +1,71 @@
+2003-05-21-BitfieldHandling.reference_output the result is different
+failed to compile 2004-03-15-IndirectGoto.c
+2004-03-15-IndirectGoto.reference_output the result is different
+failed to compile 2005-05-11-Popcount-ffs-fls.c
+2005-05-11-Popcount-ffs-fls.reference_output the result is different
+failed to compile 2007-01-07-lvsl-lvsr-Regression.c
+2007-01-07-lvsl-lvsr-Regression.reference_output the result is different
+2mm.reference_output the result is different
+3mm.reference_output the result is different
+FloatMM.reference_output the result is different
+PR10189.reference_output the result is different
+SSAtest.reference_output the result is different
+failed to compile aarch64_neon_intrinsics.c
+aarch64_neon_intrinsics.reference_output the result is different
+adi.reference_output the result is different
+failed to compile almabench.c
+almabench.reference_output the result is different
+failed to compile alti.expandfft.c
+alti.expandfft.reference_output the result is different
+failed to compile alti.isamax.c
+alti.isamax.reference_output the result is different
+failed to compile alti.sdot.c
+alti.sdot.reference_output the result is different
+failed to compile alti.stepfft.c
+alti.stepfft.reference_output the result is different
+arith.reference_output the result is different
+array.reference_output the result is different
+failed to compile atax.c
+atax.reference_output the result is different
+failed to compile bicg.c
+bicg.reference_output the result is different
+failed to compile big_bit_concat.c
+big_bit_concat.reference_output the result is different
+failed to compile big_part_set.c
+big_part_set.reference_output the result is different
+failed to compile bigint.c
+bigint.reference_output the result is different
+failed to compile bit_concat.c
+bit_concat.reference_output the result is different
+failed to compile bit_select.c
+bit_select.reference_output the result is different
+failed to compile bit_set.c
+bit_set.reference_output the result is different
+bitbit.reference_output the result is different
+bitlogic.reference_output the result is different
+failed to compile build.c
+build.reference_output the result is different
+failed to compile build2.c
+build2.reference_output the result is different
+cast-bug.reference_output the result is different
+failed to compile casts.c
+casts.reference_output the result is different
+ccc.reference_output the result is different
+failed to compile cholesky.c
+cholesky.reference_output the result is different
+failed to compile constpool.c
+constpool.reference_output the result is different
+convert.reference_output the result is different
+failed to compile correlation.c
+correlation.reference_output the result is different
+failed to compile covariance.c
+covariance.reference_output the result is different
+failed to compile divides.c
+divides.reference_output the result is different
+doitgen.reference_output the result is different
+failed to compile dt.c
+dt.reference_output the result is different
+failed to compile durbin.c
+durbin.reference_output the result is different
+failed to compile dynprog.c
+dynprog.reference_output the result is different
