@@ -1,55 +1,81 @@
-compilation failure: ../y/950221-1.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/fehler064.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/fehler064.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/980619-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
-execution failure: ../y/980619-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/tcctest_file.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/tcctest_file.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/const2.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/fehler153.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/fehler153.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/cp_error081.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/cp_error081.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/fehler151.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/fehler151.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/wprintf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/wprintf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/cp_error075.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/fehler125.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/fehler125.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/nans.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/nans.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/doublewide.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/doublewide.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/fewparams.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/fewparams.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/string-opt-5.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/string-opt-5.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/comp-goto-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/comp-goto-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/builtin_nan.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/builtin_nan.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/stdarg-3.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/stdarg-3.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
-execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/920612-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/20030331-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
-execution failure: ../y/shiftamount.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/shiftamount.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/cp_error078.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/cp_error078.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/20010114-2.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
-execution failure: ../y/20010114-2.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/fehler095.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/fehler095.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/fehler152.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/fehler152.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/conv.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/conv.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/hirverify.sh
-execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/dtscc.sh
-execution failure: ../y/920711-1.c is compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/scanf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc.sh
-compilation failure: ../y/scanf_formats.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
-compilation failure: ../y/fehler126.c is not compiled by /home/nwang/local/llvm/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/sparc_immediates.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/sparc_immediates.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/shiftamount.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/shiftamount.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/asm_test8.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/asm_test8.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler143.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler143.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fabsf1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fabsf1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/wprintf_formats.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/wprintf_formats.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler153.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler153.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/incompleteextern.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/incompleteextern.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler064.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler064.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/local_label.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/local_label.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/string-opt-5.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/string-opt-5.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/nans.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/nans.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/stdarg-3.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/stdarg-3.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/990826-0.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/990826-0.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler095.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler095.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler155.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler155.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/tcctest_file.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/tcctest_file.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920612-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/llcverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920612-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/hirverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920612-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920612-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/comp-goto-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/comp-goto-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/cp_error081.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/cp_error081.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/980619-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/llcverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/980619-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/hirverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/980619-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler154.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler154.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/20010114-2.c is compiled by /home/tester/llvm_emp/debian7_32/bin/llcverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/20010114-2.c is compiled by /home/tester/llvm_emp/debian7_32/bin/hirverify.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20010114-2.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20010114-2.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20030913-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20030913-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fewparams.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fewparams.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler125.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fehler125.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/strangeattr.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/strangeattr.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler151.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler151.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/builtin_nan.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/builtin_nan.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fabsf2.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/fabsf2.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/960218-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/960218-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920711-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/llcverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920711-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/hirverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920711-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/920711-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/doublewide.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/doublewide.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler152.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/fehler152.c is compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/20030331-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/llcverify.sh
+execution failure: /home/tester/test_bench/lang_C/single_2/20030331-1.c is compiled by /home/tester/llvm_emp/debian7_32/bin/hirverify.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20030331-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20030331-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20020720-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc.sh
+compilation failure: /home/tester/test_bench/lang_C/single_2/20020720-1.c is not compiled by /home/tester/llvm_emp/debian7_32/bin/dtscc_small.sh
