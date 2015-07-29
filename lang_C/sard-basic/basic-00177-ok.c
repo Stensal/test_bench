@@ -48,7 +48,7 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 
 #include <pthread.h>
 
-void * thread_function1(void * arg1)
+void * __klarum_strait_meta__thread_function1_(void * arg1)
 {
   char buf[10];
 
@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
 {
   pthread_t  thread1;
 
-  pthread_create(&thread1, NULL, &thread_function1, (void *)NULL);
+  pthread_create(&thread1, NULL, &__klarum_strait_meta__thread_function1_, (void *)NULL);
   pthread_exit((void *)NULL);
 
   return 0;

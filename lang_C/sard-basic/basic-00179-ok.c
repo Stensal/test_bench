@@ -50,7 +50,7 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <sys/time.h>
 #include <unistd.h>
 
-void sigalrm_handler(int arg1)
+void __klarum_strait_meta__sigalrm_handler_(int arg1)
 {
   char buf[10];
 
@@ -64,7 +64,7 @@ void sigalrm_handler(int arg1)
 int main(int argc, char *argv[])
 {
   struct itimerval new_timeset, old_timeset;
-  signal(SIGALRM, &sigalrm_handler);
+  signal(SIGALRM, &__klarum_strait_meta__sigalrm_handler_);
   new_timeset.it_interval.tv_sec = 1;
   new_timeset.it_interval.tv_usec = 0;
   new_timeset.it_value.tv_sec = 1;

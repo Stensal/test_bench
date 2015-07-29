@@ -15,7 +15,8 @@
 int main(int argc, char *argv[])
 {
 	char bStr[10];
-	for (unsigned i=1;i<=10;++i) {
+        unsigned i;
+	for (i=1;i<=10;++i) {
 		bStr[i] = (char)i + 'a';
 	}
 	return 0;
