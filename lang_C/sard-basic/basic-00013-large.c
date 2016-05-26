@@ -51,16 +51,17 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <sys/shm.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <dts_shm.h>
 
 int getSharedMem()
 {
-  return (shmget(IPC_PRIVATE, 10, 0xffffffff));
+  return (m2_shmget(IPC_PRIVATE, 10, 0xffffffff));
 }
 
 void relSharedMem(int memID)
 {
   struct shmid_ds temp;
-  shmctl(memID, IPC_RMID, &temp);
+  m2_shmctl(memID, IPC_RMID, &temp);
 }
 
 int main(int argc, char *argv[])
@@ -70,13 +71,13 @@ int main(int argc, char *argv[])
 
   memIdent = getSharedMem();
   assert(memIdent != -1);
-  buf = ((char *) shmat(memIdent, NULL, 0));
+  buf = ((char *) m2_shmat(memIdent, NULL, 0));
   assert(((int)buf) != -1);
 
   /*  BAD  */
   buf[4105] = 'A';
 
-  shmdt((void *)buf);
+  m2_shmdt((void *)buf);
   relSharedMem(memIdent);
 
   return 0;

@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 
 #if !defined(NO_LABEL_VALUES) && (!defined(STACK_SIZE) || STACK_SIZE >= 4000) && __INT_MAX__ >= 2147483647
 typedef unsigned int uint32;
@@ -121,7 +122,7 @@ simulator_kernel (int what, environment_t *env)
 
 insn_t program[2 + 1];
 
-void *malloc ();
+//void *malloc ();
 
 int
 main ()
@@ -130,16 +131,19 @@ main ()
   insn_t insn;
   int i, res;
   host_addr_t a_page = (host_addr_t) malloc (2 * 4096);
+  *(sint32 *) a_page = 88;
   target_addr_t a_vaddr = 0x123450;
   target_addr_t vaddr_page = a_vaddr / 4096;
-  a_page = (a_page + 4096 - 1) & -4096;
+  //a_page = (a_page + 4096 - 1) & -4096;
+  a_page = a_page & -4096;  
 
   env.tlb_tab[((vaddr_page) % 0x100)].vaddr_tag = vaddr_page;
   env.tlb_tab[((vaddr_page) % 0x100)].rigged_paddr = a_page - vaddr_page * 4096;
   insn.f1.offset = LOAD32_RR;
   env.registers[0] = 0;
   env.registers[2] = a_vaddr;
-  *(sint32 *) (a_page + a_vaddr % 4096) = 88;
+  //*(sint32 *) (a_page + a_vaddr % 4096) = 88;
+  *(sint32 *) (a_page) = 88;  
   insn.f1.s1 = 0;
   insn.f1.s2 = 2;
 
@@ -156,7 +160,10 @@ main ()
   res = simulator_kernel (2 + 1, &env);
 
   if (res != 88)
+  {
+	fprintf(stderr, "res %d\n", res);
     abort ();
+  }
   exit (0);
 }
 #else

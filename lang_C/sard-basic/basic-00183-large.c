@@ -55,8 +55,6 @@ int main(int argc, char *argv[])
 
   /*  BAD  */
   getcwd(buf, 4106);
-
-
-
+  
   return 0;
 }

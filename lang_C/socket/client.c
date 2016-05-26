@@ -6,7 +6,6 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h> 
-#include "dynsafe_rt.h"
 
 
 void error(const char *msg);
@@ -26,7 +25,6 @@ int main(int argc, char *argv[])
     if (sockfd < 0) 
         error("ERROR opening socket");
     server = gethostbyname(argv[1]);
-    //DSRT(printf)("server.base %p\n", DSIN(dbaseOf)(server));
     if (server == NULL) {
         fprintf(stderr,"ERROR, no such host\n");
         exit(0);
@@ -34,7 +32,6 @@ int main(int argc, char *argv[])
     bzero((char *) &serv_addr, sizeof(serv_addr));
     serv_addr.sin_family = AF_INET;
 
-    DSRT(printf)("bcopy\n");
     bcopy((char *)server->h_addr, 
          (char *)&serv_addr.sin_addr.s_addr,
          server->h_length);

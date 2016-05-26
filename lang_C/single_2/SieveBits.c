@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
+#include "dts_rt_intrinsic.h"
 
 typedef int boolean;
 
@@ -26,6 +27,7 @@ static void set (BitSet *pThis, int i)
 {
 	if (i < 0)
 		return;
+	DSIN(pLoad)(pThis->P, sizeof(void *));
 	pThis->P[i >> 5] |= (1 << (i & 0x0000001F));
 }
 static void clear (BitSet *pThis, int i)

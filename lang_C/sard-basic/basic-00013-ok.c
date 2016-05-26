@@ -51,6 +51,7 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 #include <sys/shm.h>
 #include <assert.h>
 #include <stdlib.h>
+//#include <dts_shm.h>
 
 int getSharedMem()
 {
