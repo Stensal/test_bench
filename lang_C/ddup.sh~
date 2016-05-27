@@ -1,0 +1,12 @@
+#!/bin/bash
+
+F1=$1
+F2=$2
+
+find $F1 -name *.c  > f1.list
+find $F2 -name *.c  > f2.list
+
+for i in $(cat f1.list); do
+	
+done
+

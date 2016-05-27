@@ -16,8 +16,6 @@ static int test_stdarg_va(void* p1, ...)
     return p1 == p2 && i1 == 1 && l == 0x76214365ul && i2 == 2;
 }
 
-#if defined(__GNUC__) && \
-    ((__GNUC__ < 4) || (__GNUC__ == 4 && __GNUC_MINOR__ < 4))
 
 static int test_stdarg_builtin_va(void* p1, ...)
 {
@@ -25,7 +23,7 @@ static int test_stdarg_builtin_va(void* p1, ...)
     unsigned long l;
     int i1, i2;
     void* p2;
-    __builtin_va_start(ap, p1);
+    __builtin_stdarg_start(ap, p1);
     i1 = __builtin_va_arg(ap, int);
     l = __builtin_va_arg(ap, unsigned long);
     i2 = __builtin_va_arg(ap, int);
@@ -34,18 +32,14 @@ static int test_stdarg_builtin_va(void* p1, ...)
     return p1 == p2 && i1 == 1 && l == 0x76214369ul && i2 == 2;
 }
 
-#endif
 
 static int test_stdarg(int r)
 {
     char c1 = 1, c2 = 2;
     if (test_stdarg_va(&r, c1, 0x76214365ul, c2, &r) != 1)
         return 0;
-#if defined(__GNUC__) && \
-    ((__GNUC__ < 4) || (__GNUC__ == 4 && __GNUC_MINOR__ < 4))
     if (test_stdarg_builtin_va(&r, c1, 0x76214369ul, c2, &r) != 1)
         return 0;
-#endif
     return r & 1;
 }
 
@@ -59,4 +53,3 @@ int main(int argc, char **argv)
     printf("All done.\n");
     return 0;
 }
-

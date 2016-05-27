@@ -214,7 +214,7 @@
     0.1129     0.2119	Dell Dimension XPS P133c, Pentium 133 MHz,
 			Windows 95, Microsoft Visual C 5.0.
 
-    0.0883     0.2166	Silicon Graphics Indigo², MIPS R4400,
+    0.0883     0.2166	Silicon Graphics IndigoÂ², MIPS R4400,
                         175 Mhz, "-O3".
 
     0.0351     0.0561	Dell Dimension XPS R100, Pentium II 400 MHz,
@@ -222,7 +222,7 @@
 
     0.0312     0.0542	Sun Ultra 2, UltraSPARC V9, 300 MHz, Solaris
 			2.5.1.
-			
+
     0.00862    0.01074  Dell Inspiron 9100, Pentium 4, 3.4 GHz, gcc -O3.
 
 */
@@ -235,6 +235,8 @@
 #endif
 
 #define cot(x) (1.0 / tan(x))
+
+#undef ACCURACY
 
 #define TRUE  1
 #define FALSE 0
@@ -283,7 +285,7 @@ int itercount;			   /* The iteration counter for the main loop
 int niter = ITERATIONS; 	   /* Iteration counter */
 
 static char *refarr[] = {	   /* Reference results.  These happen to
-				      be derived from a run on Microsoft 
+				      be derived from a run on Microsoft
 				      Quick BASIC on the IBM PC/AT. */
 
         "   Marginal ray          47.09479120920   0.04178472683",
@@ -648,7 +650,7 @@ static void transit_surface() {
 
 /*  Perform ray trace in specific spectral line  */
 
-static trace_line(line, ray_h)
+static void trace_line(line, ray_h)
 int line;
 double ray_h;
 {
@@ -675,8 +677,7 @@ double ray_h;
 
 /*  Initialise when called the first time  */
 
-int
-main(argc, argv)
+int main(argc, argv)
 int argc;
 char *argv[];
 {
@@ -697,7 +698,19 @@ char *argv[];
 
 	/* Process the number of iterations argument, if one is supplied. */
 
-  niter = 1000000;
+	if (argc > 1) {
+	   niter = atoi(argv[1]);
+           if (*argv[1] == '-' || niter < 1) {
+              printf("This is John Walker's floating point accuracy and\n");
+              printf("performance benchmark program.  You call it with\n");
+              printf("\nfbench <itercount>\n\n");
+              printf("where <itercount> is the number of iterations\n");
+              printf("to be executed.  Archival timings should be made\n");
+              printf("with the iteration count set so that roughly five\n");
+              printf("minutes of execution is timed.\n");
+	      exit(0);
+	   }
+	}
 
 	/* Load test case into working array */
 
@@ -718,6 +731,7 @@ char *argv[];
         printf("\nMeasured run time in seconds should be divided by %.f\n", niter / 1000.0);
         printf("to normalise for reporting results.  For archival results,\n");
         printf("adjust iteration count so the benchmark runs about five minutes.\n\n");
+
 #endif
 
 	/* Perform ray trace the specified number of times. */
@@ -765,6 +779,9 @@ char *argv[];
 	   max_lchrom = max_lspher;
 #ifndef ACCURACY
 	}
+
+        printf("Stop the timer:");
+	//gets(tbfr);
 #endif
 
 	/* Now evaluate the accuracy of the results from the last ray trace */
@@ -825,5 +842,6 @@ char *argv[];
 	} else
            printf("\nNo errors in results.\n");
 #endif
+
 	return 0;
 }
