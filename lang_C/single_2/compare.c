@@ -1,186 +1,34 @@
-#include "gpsim_assert.h"
-/*
+#include <stdint.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-   PIC PORT Test code
+int test_1(int ly) __attribute__((noinline));
+int test_1(int ly) {
+  if (ly <= INT32_MIN)
+    ly = INT32_MIN + 1;
 
- */
-
-/*
-   compare.c test compare
-
- */
-
-unsigned char failures = 0;
-
-unsigned char achar0 = 0;
-unsigned char achar1 = 0;
-unsigned int aint0 = 0;
-unsigned int aint1 = 0;
-
-char schar0 = 0;
-char schar1 = 0;
-
-void
-done()
-{
-  ASSERT(MANGLE(failures) == 0);
-  PASSED();
+  return ly;
 }
 
-/* achar0 should be zero */
+int test_2(int ly) __attribute__((noinline));
+int test_2(int ly) {
+  if (INT32_MIN >= ly)
+    ly = INT32_MIN + 1;
 
-void
-compare_char_to_lits1 (void)
-{
-
-  if (achar0)
-    failures++;
-
-  if (achar0 == 1)
-    failures++;
-
-  if (achar0 == 7)
-    failures++;
-
-  if (achar0 != 0)
-    failures++;
+  return ly;
 }
 
-/* achar0 should be `5' */
-void
-compare_char_to_lits2 (void)
-{
+int main () {
+  int x = 37;
 
-  if (!achar0)
-    failures++;
+  printf ("x = %d (0x%x)\n", x, x);
 
-  if (achar0 == 1)
-    failures++;
+  int r1 = test_1(x);
+  printf ("test_1(x) = %d (0x%x)\n", r1, r1);
 
-  if (achar0 == 7)
-    failures++;
+  int r2 = test_2(x);
+  printf ("test_2(x) = %d (0x%x)\n", r2, r2);
 
-  if (achar0 != 5)
-    failures++;
-}
-
-
-/* achar0 should equal achar1 */
-void
-compare_char_to_char1 (void)
-{
-
-  if (achar0 != achar1)
-    failures++;
-
-  if (schar0 != schar1)
-    failures++;
-}
-
-/* achar0 should be different than achar1 */
-void
-compare_char_to_char2 (void)
-{
-
-  if (achar0 == achar1)
-    failures++;
-
-}
-
-/* aint0 should be zero */
-
-void
-compare_int_to_lits1 (void)
-{
-
-  if (aint0)
-    failures++;
-
-  if (aint0 == 1)
-    failures++;
-
-  if (aint0 == 7)
-    failures++;
-
-  if (aint0 != 0)
-    failures++;
-}
-
-/* aint0 should be `5' */
-void
-compare_int_to_lits2 (void)
-{
-
-  if (!aint0)
-    failures++;
-
-  if (aint0 == 1)
-    failures++;
-
-  if (aint0 == 7)
-    failures++;
-
-  if (aint0 != 5)
-    failures++;
-}
-
-/* aint0 should be `0x1234' */
-void
-compare_int_to_lits3 (void)
-{
-
-  if (!aint0)
-    failures++;
-
-  if (aint0 == 1)
-    failures++;
-
-  if (aint0 == 7)
-    failures++;
-
-  if (aint0 != 0x1234)
-    failures++;
-}
-
-/* aint0 should equal aint1 */
-void
-compare_int_to_int1 (void)
-{
-
-  if (aint0 != aint1)
-    failures++;
-
-}
-
-/* aint0 should be different than aint1 */
-void
-compare_int_to_int2 (void)
-{
-
-  if (aint0 == aint1)
-    failures++;
-
-}
-
-void
-main (void)
-{
-
-  compare_char_to_lits1 ();
-  compare_char_to_char1 ();
-  achar0 = 5;
-  compare_char_to_lits2 ();
-  compare_char_to_char2 ();
-
-
-  compare_int_to_lits1 ();
-  aint0 = 5;
-  compare_int_to_lits2 ();
-  aint0 = 0x1234;
-  compare_int_to_lits3 ();
-  compare_int_to_int2 ();
-  aint0 = 0;
-  compare_int_to_int1 ();
-
-  done ();
+  return 0;
 }

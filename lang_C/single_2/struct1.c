@@ -1,104 +1,32 @@
-#include "gpsim_assert.h"
-// Addition tests
-
-/* bit types are not ANSI - so provide a way of disabling bit types
- * if this file is used to test other compilers besides SDCC */
-#define SUPPORT_BIT_TYPES 0
-
-/* Some compilers that support bit types do not support bit arithmetic 
- * (like bitx = bity + bitz;) */
-#define SUPPORT_BIT_ARITHMETIC 1
-
-unsigned char failures = 0;
-
-#if SUPPORT_BIT_TYPES
-
-bit bit0 = 0;
-bit bit1 = 0;
-bit bit2 = 0;
-bit bit3 = 0;
-bit bit4 = 0;
-bit bit5 = 0;
-bit bit6 = 0;
-bit bit7 = 0;
-bit bit8 = 0;
-bit bit9 = 0;
-bit bit10 = 0;
-bit bit11 = 0;
-
-#endif
-
-unsigned int aint0 = 0;
-unsigned int aint1 = 0;
-unsigned char achar0 = 0;
-unsigned char achar1 = 0;
-unsigned char *acharP = 0;
-
-struct chars
-  {
-    unsigned char c0, c1;
-    unsigned int  i0, i1;
-  };
+//===--- struct1.c --- Test Cases for Bit Accurate Types ------------------===//
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+//
+// This is a test for struct data structure. If the data layout for
+// non-regular bitwidth data is not correct, it may change the value of 
+// another field.
+//
+//===----------------------------------------------------------------------===//
 
 
-struct chars struct1;
+#include <stdio.h>
 
-void
-done()
+typedef int __attribute__ ((bitwidth(33))) int33;
+
+struct foo A;
+struct foo {
+  int33 x;
+  double D;
+};
+
+int main()
 {
-  ASSERT(MANGLE(failures) == 0);
-  PASSED();
-}
-
-void
-struct_test (void)
-{
-
-  if (struct1.c0 || struct1.c1)
-    failures++;
-
-  struct1.c0++;
-
-  if (struct1.c0 != 1)
-    failures++;
-}
-/*
-void
-ptr_to_struct (struct chars *p)
-{
-
-  if (p->c1)
-    failures++;
-
-
-  p->c1++;
-
-  if (p->c1 != 1)
-    failures++;
-}
-*/
-void add_chars(void)
-{
-
-  achar0 = struct1.c0 + struct1.c1;
-
-  if(achar0 != 1)
-    failures++;
-}
-
-void
-main (void)
-{
-
-
-  struct1.c0 = 0;
-  struct1.c1 = 0;
-  struct_test ();
-  //  ptr_to_struct (&struct1);
-
-  struct1.c0 = 0;
-  struct1.c1 = 1;
-  add_chars();
-
-  done ();
+  A.D = -3.141593;
+  A.x = -1;
+  printf("%f\n", A.D);
+    
+  return 0;
 }

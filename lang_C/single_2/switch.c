@@ -1,42 +1,52 @@
-#include <assert.h>
-#include <limits.h>
+//===--- switch.c --- Test Cases for Bit Accurate Types -------------------===//
+//
+// This file is distributed under the University of Illinois Open Source
+// License. See LICENSE.TXT for details.
+//
+//===----------------------------------------------------------------------===//
+//
+// This is a test for switch statement. The switch value is a
+// non-regular bitwidth. test(int3 c) function return the value of the
+// argument c. 
+//
+//===----------------------------------------------------------------------===//
 
-static int switch1(int k)
+
+#include <stdio.h>
+
+typedef unsigned int __attribute__ ((bitwidth(7))) int7;
+typedef unsigned int __attribute__ ((bitwidth(3))) int3;
+
+const int7 zero = (int7)(1 << 8); // constant 0;
+static int3 seven = (int3)0xf; // constant 7;
+
+int3  test(int3 c)
 {
-	switch(k) {
-	case 42:
-		return 5;
-	case 13:
-		return 7;
-	case INT_MAX:
-		return 8;
-	case -1:
-	case INT_MIN:
-		return 9;
-	}
-	return 3;
+    
+  switch(c){
+  case 0: return seven >> 3;
+  case 1: return seven >>2;
+  case 2: return (seven >> 1) & 2;
+  case 3: return (seven >> 1);
+  case 4: return seven & 4;
+  case 5: return seven & 5;
+  case 6: return seven & 6;
+  case 7: return seven;
+  default: printf("error\n"); return -1;
+  }
+  return 0;
 }
 
-static int __attribute__((noinline)) switch2(int k)
+int main()
 {
-	return switch1(k);
-}
+  unsigned char  c;
+  unsigned char i;
 
-int main(void)
-{
-	assert(switch1(42) == 5);
-	assert(switch1(13) == 7);
-	assert(switch1(-1) == 9);
-	assert(switch1(700) == 3);
-	assert(switch1(-32000) == 3);
-	assert(switch1(INT_MAX) == 8);
-	assert(switch1(INT_MIN) == 9);
-	assert(switch2(42) == 5);
-	assert(switch2(13) == 7);
-	assert(switch2(-1) == 9);
-	assert(switch2(700) == 3);
-	assert(switch2(-32000) == 3);
-	assert(switch2(INT_MAX) == 8);
-	assert(switch2(INT_MIN) == 9);
-	return 0;
+   
+  for(i=0; i< ((unsigned char)zero) + 8; i++){
+    c = (unsigned char)test((int3)i);
+    if(c != i)
+      printf("error: i=%hhd, c=%hhd\n", i, c);
+  }
+  return 0;
 }

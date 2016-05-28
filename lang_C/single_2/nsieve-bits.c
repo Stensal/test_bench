@@ -1,59 +1,36 @@
 /*
- * The Great Computer Language Shootout
- * http://shootout.alioth.debian.org/
- *
- * Written by Dima Dorfman, 2004
- * Compile: gcc -std=c99 -O2 -o nsieve_bits_gcc nsieve_bits.c
- */
+** The Great Computer Language Shootout
+** http://shootout.alioth.debian.org/
+** contributed by Mike Pall
+*/
 
-#include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include <string.h>
 
-typedef uint_fast8_t bits;
-#define NBITS   (CHAR_BIT * sizeof(bits))
+typedef unsigned int bits;
+#define BBITS		(sizeof(bits) * 8)
+#define BSIZE(x)	(((x) / 8) + sizeof(bits))
+#define BMASK(x)	(1 << ((x) % BBITS))
+#define BTEST(p, x)	((p)[(x) / BBITS] & BMASK(x))
+#define BFLIP(p, x)	(p)[(x) / BBITS] ^= BMASK(x)
 
-static uintmax_t
-nsieve(uintmax_t m)
+int main(int argc, char **argv)
 {
-        uintmax_t count, i, j;
-        bits a[m / NBITS];
-
-        memset(a, (1 << CHAR_BIT) - 1, sizeof(a));
-        count = 0;
-        for (i = 2; i < m; ++i)
-                if (a[i / NBITS] & (1 << i % NBITS)) {
-                        for (j = i + i; j < m; j += i)
-                                a[j / NBITS] &= ~(1 << j % NBITS);
-                        ++count;
-                }
-        return (count);
-}
-
-static void
-test(unsigned long n)
-{
-        uintmax_t count, m;
-
-        m = (1 << n) * 10000;
-        count = nsieve(m);
-        printf("Primes up to %8ju %8ju\n", m, count);
-}
-
-int
-main(int argc, char **argv)
-{
-        unsigned long n = 9;
-        char *cp;
-
-		if(argc > 1)
-			n = atoi(argv[1]);
-        test(n);
-        if (n >= 1)
-                test(n - 1);
-        if (n >= 2)
-                test(n - 2);
-        exit(0);
+  unsigned int m, sz = 10000 << 12;
+  bits *primes = (bits *)malloc(BSIZE(sz));
+  if (!primes) return 1;
+  for (m = 0; m <= 2; m++) {
+    unsigned int i, j, count = 0, n = sz >> m;
+    memset(primes, 0xff, BSIZE(n));
+    for (i = 2; i <= n; i++)
+      if (BTEST(primes, i)) {
+	count++;
+	for (j = i + i; j <= n; j += i)
+	  if (BTEST(primes, j)) BFLIP(primes, j);
+      }
+    printf("Primes up to %8d %8d\n", n, count);
+  }
+  free(primes);
+  return 0;
 }

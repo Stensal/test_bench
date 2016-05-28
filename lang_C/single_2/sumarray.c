@@ -1,25 +1,23 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "helpers.h"
 
-int SumArray(int Array[], int Num) {
-	unsigned i, Result = 0;
-	Array[34] = 1234;
+union Array {
+  v4sf  Vectors[100];
+  float Floats [400];
+};
 
-	for (i = 0; i < Num; ++i)
-		Result += Array[i];
-
-	return Result;
-}
+union Array TheArray;
 
 int main() {
-	int *Array = (int*)malloc(sizeof(int)*100);
-	int i;
+  int i;
+  v4sf sum = { 0, 0, 0, 0};
+  FV sumFV;
+  for (i = 0; i < 400; ++i)
+    TheArray.Floats[i] = i*12.345F;
 
-	for (i = 0; i < 100; i += 2)
-		Array[i] = i*4;
-	for (i = 1; i < 100; i += 2)
-		Array[i] = i*2;
+  for (i = 0; i < 100; ++i)
+    sum += TheArray.Vectors[i];
 
-	printf("Produced: %d\n", SumArray(Array, 100));
-	return 0;
+  sumFV.V = sum;
+  printFV(&sumFV);
+  return 0;
 }

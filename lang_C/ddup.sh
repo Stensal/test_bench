@@ -4,6 +4,7 @@ D1=$1
 D2=$2
 
 find $D1 -name *.c  > f1.list
+find $D1 -name *.h  >> f1.list
 
 for i in $(cat f1.list); do
 	f1=$(basename $i)

@@ -1,102 +1,188 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define  nil		0
+#define	 false		0
+#define  true		1
+#define  bubblebase	1.61f
+#define  dnfbase 	3.5f
+#define  permbase 	1.75f
+#define  queensbase 1.83f
+#define  towersbase 2.39f
+#define  quickbase 	1.92f
+#define  intmmbase 	1.46f
+#define  treebase 	2.5f
+#define  mmbase 	0.0f
+#define  fpmmbase 	2.92f
+#define  puzzlebase	0.5f
+#define  fftbase 	0.0f
+#define  fpfftbase 	4.44f
+    /* Towers */
+#define maxcells 	 18
+
+    /* Intmm, Mm */
+#define rowsize 	 40
+
+    /* Puzzle */
+#define size	 	 511
+#define classmax 	 3
+#define typemax 	 12
+#define d 		     8
+
+    /* Bubble, Quick */
+#define sortelements 5000
+#define srtelements  500
+
+    /* fft */
+#define fftsize 	 256 
+#define fftsize2 	 129  
 /*
- * Project:     GCC-firm
- * File name:   test/Queens.c
- * Purpose:     solve the queens problem
- * Author:      Markus Armbruster (in sather-k)
- * Modified by: Michael Beck (for GCC-firm)
- * Created:     XX.11.2001
- * CVS-ID:      $Id$
- * Copyright:   (c) 2001 Universitaet Karlsruhe
- * Licence:
- */
+type */
+    /* Perm */
+#define permrange     10
+
+   /* tree */
+struct node {
+	struct node *left,*right;
+	int val;
+};
+
+    /* Towers */ /*
+    discsizrange = 1..maxcells; */
+#define    stackrange	3
+/*    cellcursor = 0..maxcells; */
+struct    element {
+	int discsize;
+	int next;
+};
+/*    emsgtype = packed array[1..15] of char;
+*/
+    /* Intmm, Mm */ /*
+    index = 1 .. rowsize;
+    intmatrix = array [index,index] of integer;
+    realmatrix = array [index,index] of real;
+*/
+    /* Puzzle */ /*
+    piececlass = 0..classmax;
+    piecetype = 0..typemax;
+    position = 0..size;
+*/
+    /* Bubble, Quick */ /*
+    listsize = 0..sortelements;
+    sortarray = array [listsize] of integer;
+*/
+    /* FFT */
+struct    complex { float rp, ip; } ;
 /*
-  -- The notorious n-queens problem (C.F. Gauss, 1850)
-  -- Copyright (C) 1996 Markus Armbruster
+    carray = array [1..fftsize] of complex ;
+    c2array = array [1..fftsize2] of complex ;
 */
 
-#include <stdlib.h>
-#include <stdio.h>
+float value, fixed, floated;
 
+    /* global */
+long    seed;  /* converted to long for 16 bit WR*/
 
-typedef int boolean;
+    /* Perm */
+int    permarray[permrange+1];
+/* converted pctr to unsigned int for 16 bit WR*/
+unsigned int    pctr;
 
-#define true	1
-#define false	0
+    /* tree */
+struct node *tree;
 
-static int *row;
-// queen in column c is at row[c]
+    /* Towers */
+int	   stack[stackrange+1];
+struct element    cellspace[maxcells+1];
+int    freelist,  movesdone;
 
-static int myabs(int i) {
-  if(0 > i)
-    i = -i;
-  return(i);
+    /* Intmm, Mm */
+
+int   ima[rowsize+1][rowsize+1], imb[rowsize+1][rowsize+1], imr[rowsize+1][rowsize+1];
+float rma[rowsize+1][rowsize+1], rmb[rowsize+1][rowsize+1], rmr[rowsize+1][rowsize+1];
+
+    /* Puzzle */
+int	piececount[classmax+1],	class[typemax+1], piecemax[typemax+1];
+int	puzzl[size+1], p[typemax+1][size+1], n, kount;
+
+    /* Bubble, Quick */
+int sortlist[sortelements+1], biggest, littlest, top;
+
+    /* FFT */
+struct complex    z[fftsize+1], w[fftsize+1], e[fftsize2+1];
+float    zr, zi;
+
+void Initrand () {
+    seed = 74755L;   /* constant to long WR*/
 }
 
-static boolean place_ok (int i) {
-  // return whether queen in column i is
-  // not in check from queens left of it
-  int j = 0;
-  boolean res;
-
-  while (j < i) {
-    if ((row[j] == row[i]) || ((myabs(row[i]-row[j])) == (i-j))) {
-      res = false;
-      return(res);
-    }
-    j = j+1;
-  }
-  res = true;
-  return(res);
-}
-
-static int solve (int n) {
-  // return the number of solutions to the n-queens problem
-  int c = 0;
-  int res = 0;
-
-  row = (void *)malloc(sizeof(*row) * n);
-  row[0] = -1;
-  while (c >= 0) {
-    row[c] = row[c]+1;
-    while ((row[c] < n) && (!place_ok(c))) {
-      row[c] = row[c]+1;
-    }
-    if (row[c] < n) { // successfully placed at (c,row[c])
-      if (c == n-1)
-	res = res+1;
-      else {
-	c = c+1;
-	row[c] = -1;
-      }
-    }
-    else // dead end, track back
-      c = c-1;
-  }
-  free(row);
-
-  return(res);
-}
-
-static void usage (const char *progname) {
-  printf("usage: %s [n]\n", progname);
+int Rand () {
+    seed = (seed * 1309L + 13849L) & 65535L;  /* constants to long WR*/
+    return( (int)seed );     /* typecast back to int WR*/
 }
 
 
-int main (int argc, char *argv[]) {
-  int n;
+    /* The eight queens problem, solved 50 times. */
+/*
+	type    
+	    doubleboard =   2..16;
+	    doublenorm  =   -7..7;
+	    boardrange  =   1..8;
+	    aarray      =   array [boardrange] of boolean;
+	    barray      =   array [doubleboard] of boolean;
+	    carray      =   array [doublenorm] of boolean;
+	    xarray      =   array [boardrange] of boardrange;
+*/
 
-  switch (argc) {
-  case 1:
-    n = 8;
-    break;
-  case 2:
-    n = atoi(argv[1]);
-    break;
-  default:
-    usage("queens");
-    return 0;
-  }
-  printf("The %d-queens problem has %d solutions.\n", n, solve(n));
+void Try(int i, int *q, int a[], int b[], int c[], int x[]) {
+	int     j;
+	j = 0;
+	*q = false;
+	while ( (! *q) && (j != 8) ) {
+		j = j + 1;
+		*q = false;
+		if ( b[j] && a[i+j] && c[i-j+7] ) {
+			x[i] = j;
+		    b[j] = false;
+		    a[i+j] = false;
+		    c[i-j+7] = false;
+		    if ( i < 8 ) {
+		    	Try(i+1,q,a,b,c,x);
+				if ( ! *q ) {
+					b[j] = true;
+				    a[i+j] = true;
+				    c[i-j+7] = true;
+				}
+			}
+		    else *q = true;
+	    }
+	}
+}
+	
+void Doit () {
+	int i,q;
+	int a[9], b[17], c[15], x[9];
+	i = 0 - 7;
+	while ( i <= 16 ) {
+		if ( (i >= 1) && (i <= 8) ) a[i] = true;
+	    if ( i >= 2 ) b[i] = true;
+	    if ( i <= 7 ) c[i+7] = true;
+	    i = i + 1;
+	}
 
-  return 0;
+	Try(1, &q, b, a, c, x);
+	if ( !q ) printf (" Error in Queens.\n");
+}
+
+void Queens (int run) {
+    int i;
+    for ( i = 1; i <= 50; i++ ) Doit();
+	 printf("%d\n", run + 1);
+}
+
+int main()
+{
+	int i;
+	for (i = 0; i < 100; i++) Queens(i);
+	return 0;
 }

@@ -1,14 +1,8 @@
-int wwrite (long long);
+#include <stdlib.h>
 
-main()
-{
-  if (wwrite((long long) 0) != 123)
-    abort();
-  exit(0);
-}
+int wwrite(long long i);
 
-int
-wwrite(long long i)
+int wwrite(long long i)
 {
   switch(i)
     {
@@ -21,4 +15,11 @@ wwrite(long long i)
     default:
       return 123;
     }
+}
+
+int main()
+{
+  if (wwrite(0LL) != 123)
+    return 1;
+  return 0;
 }
