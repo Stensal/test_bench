@@ -109,3 +109,4 @@ i: 7 v: 8 dig: 2 set:4
 i: 7 v: 8 dig: 1 set:4
  0
 i: 7 v: 8 dig: 1 set:4
+exit 0

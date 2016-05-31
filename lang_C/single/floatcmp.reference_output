@@ -148,3 +148,4 @@ islessgreater(nan, nan) = false
 !islessequal(3.000000, nan) = true
 !islessgreater(3.000000, nan) = true
 !isunordered(3.000000, nan) = false
+exit 0
