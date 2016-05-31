@@ -109,3 +109,4 @@ bit fields:
 
 sizeof stb 8
 stb	-1 -2 3 4 -1 6 7
+exit 0

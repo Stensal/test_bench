@@ -5,3 +5,4 @@ Compare hallo, hallo -> 0 (should be 0)
 Compare hallo, welt -> -1 (should be -1)
 Compare welt, hallo -> 1 (should be 1)
 Simpler: -1
+exit 0

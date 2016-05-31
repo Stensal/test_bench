@@ -3,3 +3,4 @@ Sieve.c
 Usage: Sieve n
 Continuing with default input.
 number of primes in [2..500) : 95 (correct: 2..500: 95)
+exit 0

@@ -3,3 +3,4 @@ sizeof struct(A) 8
 sizeof a         8
 a.x = 3 (should be 3)
 a.y = 4 (should be 4)
+exit 0

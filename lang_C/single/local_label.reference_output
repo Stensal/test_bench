@@ -8,3 +8,4 @@ behind label3
 behind label (2)
 goto fininsh
 finished
+exit 0

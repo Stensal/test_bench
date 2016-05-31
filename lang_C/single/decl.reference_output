@@ -5,3 +5,4 @@ a in hide 4
 a in in hide 16
 a in hide 4
 a outside hide -8
+exit 0

@@ -1,2 +1,3 @@
 Res: 42 (should be 42)
 Res2: 13 (should be 13)
+exit 0

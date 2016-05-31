@@ -30,3 +30,4 @@ found    Hello World!
 
 expected k 90 91 92 | m 93 94 95 | n 96 97 98
 found    k 90 91 92 | m 93 94 95 | n 96 97 98
+exit 0

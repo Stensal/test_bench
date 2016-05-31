@@ -11,3 +11,4 @@ x>>x: good
 x&x: good
 x^x: good
 x|x: good
+exit 0
