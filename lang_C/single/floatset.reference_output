@@ -64,3 +64,4 @@ test not double isless res:1
 test not double islessequal res:1
 test not double islessgreater res:1
 test not double isunordered res:0
+exit 0

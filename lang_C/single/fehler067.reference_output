@@ -6,3 +6,4 @@ Executing 'motion estimation' 2 times...
 MinDiff: 18363
 Best X: 218
 Best Y: 84
+exit 0

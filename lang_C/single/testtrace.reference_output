@@ -8,3 +8,4 @@ sum = 60
 sum = 69
 sum = 78
 sum = 87
+exit 0

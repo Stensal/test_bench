@@ -8,3 +8,4 @@
 
 2. vload -> vadd -> vstore, multi dimensional array, in loop
 ==========================================
+exit 0

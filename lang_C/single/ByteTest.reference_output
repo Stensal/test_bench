@@ -1,2 +1,3 @@
 ByteTest.c
  200 + 56 = 0 (expected 0)
+exit 0

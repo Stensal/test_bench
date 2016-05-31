@@ -16,3 +16,4 @@ Int.c
   i = imax * 2 () : -2
   i = imin - 1 () : 2147483646
   i = imin * 2 () : 0
+exit 0

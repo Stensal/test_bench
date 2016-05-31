@@ -1,4 +1,4 @@
-Result for test_unsigned_long_long
+Result for void test_unsigned_long_long()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -41,7 +41,7 @@ res16[19] = 0
 res32[19] = 0
 res16[20] = 0
 res32[20] = 0
-Result for test_long_long
+Result for void test_long_long()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -84,3 +84,4 @@ res16[19] = 42
 res32[19] = 1179819
 res16[20] = 42
 res32[20] = 1179819
+exit 0

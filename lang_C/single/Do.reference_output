@@ -5,3 +5,4 @@ Give search tree depth!
 Continuing with default value 9.
  Count = 87381
  Max = 29132
+exit 0

@@ -4,3 +4,4 @@ Res3: 0 0 0 0 0
 Res4: 11
 Res5: 1
 Res6: Hello gcc
+exit 0

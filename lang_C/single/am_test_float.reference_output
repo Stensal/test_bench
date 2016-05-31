@@ -38,3 +38,4 @@ Test cmp: 0.000000
 Test2 cmp: 0.000000
 Testp cmp: 1.000000
 Testp2 cmp: 1.000000
+exit 0

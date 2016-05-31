@@ -1,4 +1,4 @@
-Result for test_long
+Result for void test_long()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -41,7 +41,7 @@ res16[19] = 42
 res32[19] = 1179819
 res16[20] = 42
 res32[20] = 1179819
-Result for test_int
+Result for void test_int()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -84,7 +84,7 @@ res16[19] = 42
 res32[19] = 1179819
 res16[20] = 42
 res32[20] = 1179819
-Result for test_short
+Result for void test_short()
 res16[0] = 53
 res32[0] = 5548
 res16[1] = 31
@@ -127,7 +127,7 @@ res16[19] = 42
 res32[19] = 171
 res16[20] = 42
 res32[20] = 171
-Result for test_char
+Result for void test_char()
 res16[0] = 53
 res32[0] = -84
 res16[1] = 31
@@ -170,7 +170,7 @@ res16[19] = 42
 res32[19] = 85
 res16[20] = 42
 res32[20] = 85
-Result for test_unsigned_long
+Result for void test_unsigned_long()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -213,7 +213,7 @@ res16[19] = 0
 res32[19] = 0
 res16[20] = 0
 res32[20] = 0
-Result for test_unsigned_int
+Result for void test_unsigned_int()
 res16[0] = 53
 res32[0] = 4593068
 res16[1] = 31
@@ -256,7 +256,7 @@ res16[19] = 0
 res32[19] = 0
 res16[20] = 0
 res32[20] = 0
-Result for test_unsigned_short
+Result for void test_unsigned_short()
 res16[0] = 53
 res32[0] = 5548
 res16[1] = 31
@@ -299,7 +299,7 @@ res16[19] = 0
 res32[19] = 0
 res16[20] = 0
 res32[20] = 0
-Result for test_unsigned_char
+Result for void test_unsigned_char()
 res16[0] = 53
 res32[0] = 172
 res16[1] = 31
@@ -342,3 +342,4 @@ res16[19] = 0
 res32[19] = 0
 res16[20] = 0
 res32[20] = 0
+exit 0

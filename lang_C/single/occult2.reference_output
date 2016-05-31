@@ -3,3 +3,4 @@ minus = 0
 mul = 248
 shl = 4290772992
 sub = 0
+exit 0

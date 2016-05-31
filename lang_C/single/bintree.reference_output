@@ -5,3 +5,4 @@ stretch tree of depth 11	 check: -1
 128	 trees of depth 8	 check: -128
 32	 trees of depth 10	 check: -32
 long lived tree of depth 10	 check: -1
+exit 0

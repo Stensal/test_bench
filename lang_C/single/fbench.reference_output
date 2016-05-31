@@ -8,3 +8,4 @@ adjust iteration count so the benchmark runs about five minutes.
 
 Stop the timer:
 No errors in results.
+exit 0

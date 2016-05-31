@@ -8,3 +8,4 @@ abs1(inf) = inf
 abs2(inf) = inf
 abs1(-inf) = inf
 abs2(-inf) = inf
+exit 0

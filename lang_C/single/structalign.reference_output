@@ -7,3 +7,4 @@
        s.b: size: 4 align: 1
        s.c: size: 4 align: 1
   struct T: size: 4 align: 4
+exit 0

@@ -1,2 +1,3 @@
 Args.c
 Result: 2 (should be 2)
+exit 0

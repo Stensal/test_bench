@@ -26,3 +26,4 @@ minus_abs_char(-42) = -42
 minus_abs_char(42) = -42
 minus_abs_char(127) = -127
 minus_abs_char(-128) = -128
+exit 0

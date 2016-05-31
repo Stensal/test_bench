@@ -1,2 +1,3 @@
 HelloWorld.c
   Hello World!
+exit 0

@@ -3,3 +3,4 @@ default
 case 1
 end
 end
+exit 0

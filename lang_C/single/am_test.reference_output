@@ -94,3 +94,4 @@ Test shr: 0 (should be 0)
 Test2 shr: 0 (should be 0)
 Testp shr: 0 (should be 0)
 Testp2 shr: 0 (should be 0)
+exit 0

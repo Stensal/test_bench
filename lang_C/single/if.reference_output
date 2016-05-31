@@ -39,3 +39,4 @@ testam(-24,13,7) = 13 (should be 13)
 testam(102,13,7) = 7 (should be 7)
 test9(3,2) = 2 (should be 2)
 test9(-42,-42) = -42 (should be -42)
+exit 0

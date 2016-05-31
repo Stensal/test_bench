@@ -3,3 +3,4 @@ one: 1
 zero: 0
 eleven: 11
 five: 5
+exit 0
