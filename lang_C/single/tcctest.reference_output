@@ -481,4 +481,3 @@ static_test Expect 1 -> 1
 static_test Expect 1 -> 1
 static_test Expect 1 -> 1
 static_test Expect 1 -> 1
-exit 0
