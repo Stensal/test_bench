@@ -3,5 +3,5 @@
 
    Module     Error        RunTime      MFLOPS
                             (usec)
-     1          0.0000      0.0000      0.0000
+     1         -0.0000      0.0000      0.0000
 exit 0
