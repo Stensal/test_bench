@@ -1,0 +1,2 @@
+bar: 0 1 2 3 (should be 0 1 2 3)
+exit 0

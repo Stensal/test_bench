@@ -1,0 +1,4 @@
+Label.c
+ GOTO Successful
+ Leaving with i = 0
+exit 0
