@@ -3,7 +3,9 @@
 long double dnan = 1.0l/0.0l - 1.0l/0.0l;
 long double x = 1.0l;
 
-void leave ()
+// Changed by Stensal Inc.
+// it is not treated as a signal handler
+void leave (int x)
 {
   exit (0);
 }

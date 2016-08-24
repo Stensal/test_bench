@@ -25,7 +25,7 @@
 
 #define OFFSET (MAP_LEN/2 - 2 * sizeof (char));
 
-
+/*
 extern void *m2_mmap(void *addr, size_t length, int prot, int flags,
 					 int fd, off_t offset);
 
@@ -33,6 +33,7 @@ extern void *m2_mmap(void *addr, size_t length, int prot, int flags,
 #if defined(KLARUM)
 #define mmap m2_mmap
 #endif
+*/
 
 f (int s, char *p)
 {
@@ -55,9 +56,11 @@ main ()
     exit (0);
   p = mmap (MAP_START, MAP_LEN, PROT_READ|PROT_WRITE,
 			MAP_ANONYMOUS|MAP_FIXED|MAP_PRIVATE, dev_zero, 0);
+
+  printf ("MAP_LEN = %u, p=%p\n", MAP_LEN, p);
   if (p != (char *)-1)
     {
-      p += OFFSET;
+	  //p += OFFSET;
       p[39] = 0;
       f (0, p);
       if (p[39] != (char)-2)

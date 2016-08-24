@@ -13,12 +13,12 @@ static void test_indvars(int *Array1, int Array2[100][200]) {
 
   for (i = 13; i < 100; i++)
     for (j = 0; j < 100; j+=3)       /* 2d array access */
-      Array2[i][j/3] = Array2[i][i];
+		Array2[i][j/3] = Array2[i][i]; // reported by Klaram that uninitialized value is assigned.
 } 
 
 
 int main() {
-  int Array[100][200], i, j;
+  int Array[100][200] = {/* fixed by Stensal Inc. */ 0}, i, j;
   double sum = 0.0;
   
   for (i=0; i < 100; i+=2)

@@ -3,7 +3,9 @@
 float fnan = 1.0f/0.0f - 1.0f/0.0f;
 float x = 1.0f;
 
-void leave ()
+// Changed by Stensal Inc.
+// It is not treated as a signal handler
+void leave (int x)
 {
   exit (0);
 }
