@@ -1,0 +1,3 @@
+[submodule "lang_C/libc-test"]
+	path = lang_C/libc-test
+	url = git@github.com:Stensal/libc-test.git
