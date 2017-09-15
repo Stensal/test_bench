@@ -19,7 +19,7 @@ int __attribute__((noinline)) create_ce_mode() {
 
 struct cache_entry *make_cache_entry(int mode, const char *path) {
  int len = strlen(path);
- struct cache_entry *ce = (struct cache_entry *) calloc(1, 1);
+ struct cache_entry *ce = (struct cache_entry *) calloc(1, sizeof(struct cache_entry)/*fixed by Stensal Inc.*/);
 
  ce->ce_flags = create_ce_flags(len);
  ce->ce_mode = create_ce_mode();

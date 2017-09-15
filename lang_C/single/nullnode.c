@@ -13,6 +13,8 @@ int main() {
     struct foo *cmd;
     int cmdflags;
 
+	// fixed by Stensal Inc. 
+	cmd = 0;
     if (cmdflags & CF_COND) {
 
     goto maybe;
@@ -22,7 +24,7 @@ int main() {
 	    }
 	}
     maybe:
-      curcmd = cmd;
+	curcmd = cmd; // reported by Klaram that uninitialized value is assigned
     }
 
     return 0;
