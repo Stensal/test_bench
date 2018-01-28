@@ -37,7 +37,7 @@ extern void *m2_mmap(void *addr, size_t length, int prot, int flags,
 #endif
 */
 
-f (int s, char *p)
+void f (int s, char *p)
 {
   int i;
   for (i = s; &p[i] < &p[40] && i >= 0; i++)
@@ -46,7 +46,7 @@ f (int s, char *p)
     }
 }
 
-main ()
+int main ()
 {
 #ifdef MAP_ANON
   char *p;
@@ -73,5 +73,5 @@ main ()
 	abort ();
     }
 #endif
-  exit (0);
+  return 0;
 }
