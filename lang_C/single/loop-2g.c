@@ -1,5 +1,5 @@
 #include <limits.h>
-#include <stdlib.h>
+#include <stdio.h>
 
 #ifdef __unix__ /* ??? Is that good enough? */
 #include <sys/types.h>
