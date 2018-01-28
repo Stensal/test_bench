@@ -3,6 +3,7 @@
    its address taken.  */
 
 #ifndef NO_LABEL_VALUES
+#include <stdlib.h>
 static void *ptr1, *ptr2;
 static int i = 1;
 
