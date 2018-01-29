@@ -59,7 +59,7 @@ int main ()
   p = mmap (MAP_START, MAP_LEN, PROT_READ|PROT_WRITE,
 			MAP_ANONYMOUS|MAP_FIXED|MAP_PRIVATE, dev_zero, 0);
 
-  printf ("MAP_LEN = %u, p=%p\n", MAP_LEN, p);
+  //printf ("MAP_LEN = %u, p=%p\n", MAP_LEN, p);
   if (p != (char *)-1)
     {
 	  //p += OFFSET;
