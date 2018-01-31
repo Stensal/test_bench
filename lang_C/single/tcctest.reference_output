@@ -86,8 +86,8 @@ test true1
 test trueA
 test 2
 __LINE__ defined
-__LINE__=221 __FILE__=../test_bench/lang_C/single/tcctest.c
-__LINE__=201 __FILE__=../test_bench/lang_C/single/tcctest.c
+__LINE__=221 __FILE__=../testsuite/lang_C/single/tcctest.c
+__LINE__=201 __FILE__=../testsuite/lang_C/single/tcctest.c
 __LINE__=204 __FILE__=test
 __func__ = macro_test
 vaarg=1
