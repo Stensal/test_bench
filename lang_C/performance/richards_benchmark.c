@@ -23,8 +23,8 @@
 
 #ifdef SMALL_PROBLEM_SIZE
 #define                Count           1000*1000
-#define                Qpktcountval    2326389
-#define                Holdcountval     930555
+#define                Qpktcountval    2326410
+#define                Holdcountval     930563
 #else
 #define                Count           10000*1000
 #define                Qpktcountval    23263894
