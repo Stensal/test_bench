@@ -57,5 +57,5 @@ int main(int argc, char *argv[])
   read_value = buf[17];
 
 
-  return 0;
+  return read_value;
 }

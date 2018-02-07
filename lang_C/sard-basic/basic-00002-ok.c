@@ -50,12 +50,12 @@ PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 int main(int argc, char *argv[])
 {
   char read_value;
-  char buf[10];
+  char buf[10] = { 0 };
 
 
   /*  OK  */
   read_value = buf[9];
 
 
-  return 0;
+  return read_value;
 }
