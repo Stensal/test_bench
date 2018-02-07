@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
   int init_value;
   int inc_value;
   int loop_counter;
-  char buf[10];
+  char buf[10] = {0};
 
   init_value = 0;
   inc_value = 9 - (9 - 1);
@@ -65,5 +65,5 @@ int main(int argc, char *argv[])
   }
 
 
-  return 0;
+  return buf[0];
 }
