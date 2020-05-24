@@ -60,9 +60,10 @@ int main ()
 			MAP_ANONYMOUS|MAP_FIXED|MAP_PRIVATE, dev_zero, 0);
 
   //printf ("MAP_LEN = %u, p=%p\n", MAP_LEN, p);
+  printf ("MAP_LEN = %u, p=%p\n", MAP_LEN, p);
   if (p != (char *)-1)
     {
-	  //p += OFFSET;
+      //p += OFFSET;
       p[39] = 0;
       f (0, p);
       if (p[39] != (char)-2)

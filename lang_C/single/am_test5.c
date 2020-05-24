@@ -9,7 +9,6 @@ int i = 3;
 
 int main(int argc, char **argv) {
 	struct s a[100];
-
 	// fixed by Stensal Inc.
 	a[i].m1 = 10;
 	// KLARAM found a[i].m1 is not initialized

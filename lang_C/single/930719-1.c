@@ -10,7 +10,7 @@ f (foo, bar, com)
 	{
 	case 1:
 	  if (com != 0)
-		  return align; // reported by Klaram, an uninitialized value is assigned
+	       return align; // reported by Klaram, an uninitialized value is assigned
 	  *(char *) 0 = 0;
 	}
     }
